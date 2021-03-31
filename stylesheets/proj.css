@@ -1,6 +1,14 @@
 img {vertical-align: middle;}
 
 /* Slideshow */
+.body
+{
+	font-family: 'Roboto';
+	  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
 
 .featured {
 	left: 40%;
@@ -43,11 +51,6 @@ img {vertical-align: middle;}
 	transition:		1s;
 }
 
-.item:hover
-{
-
-}
-
 .ftext:hover p
 {
 	visibility: visible;
@@ -85,12 +88,14 @@ p[id^="fd_"]
 
 
 .fshow {
+	transform-style: preserve-3d;
+    transition: transform 0.5s;
+    transform-origin: 50% 50% ;
 	display: flex;
 	flex-direction: row;
 	height: 100%;
 	width: 100%;
 	position: relative;
-	transform-style: preserve-3d;
 	transition: transform 1s;
 }
 
