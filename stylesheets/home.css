@@ -1,0 +1,37 @@
+.nav_bar
+{
+	display: flex;
+	justify-content: space-between;
+	padding: 42px;
+	font-size: large;
+}
+
+.mid
+{
+	display: flex;
+	justify-content: center;
+}
+
+.nav_link
+{
+	height: 21px;
+	border-bottom: 2px solid transparent;
+	transition:  border-bottom 0.5s;
+}
+
+.nav_link a
+{
+	color: darkgoldenrod;
+	text-decoration: none;
+	transition: color 0.5s;
+}
+
+.nav_link:hover
+{
+	border-bottom:  1px solid grey;
+}
+
+.nav_link a:hover
+{
+	color: goldenrod;
+}

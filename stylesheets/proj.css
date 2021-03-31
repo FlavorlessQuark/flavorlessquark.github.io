@@ -1,0 +1,276 @@
+img {vertical-align: middle;}
+
+/* Slideshow */
+
+.featured {
+	left: 40%;
+	display: flex;
+	margin: 0;
+	width: 18rem;
+	height: 15rem;
+	position: relative;
+	perspective: 1300px;
+	background-repeat: no-repeat;
+	top: 99%;
+}
+
+.fcontent
+{
+    top: 50%;
+    position: relative;
+}
+.featured {
+	left: 40%;
+	display: flex;
+	margin: 0;
+	width: 18rem;
+	height: 15rem;
+	position: relative;
+	perspective: 1300px;
+	background-repeat: no-repeat;
+	top: 500%;
+}
+
+.ftext
+{
+	width: 80%;
+	top:			10%;
+	height:			50%;
+	font-size: 27%;
+	position:		relative;
+	color: rgba(0, 0, 0, 0);
+	text-align:		center;
+	overflow-wrap:	anywhere;
+	/* margin: 1px; */
+	visibility: visible;
+	position: absolute;
+	margin: 0% 4% 0% 9%;
+}
+
+.ftext p{
+	/* background: red; */
+	/* visibility: hidden; */
+	transition:		1s;
+}
+
+.item:hover
+{
+
+}
+
+.ftext:hover p
+{
+	visibility: visible;
+	/* display: block; */
+	color: #eacf55;
+}
+
+p[id^="fd_"]
+{
+	margin: 0px;
+	background-repeat: no-repeat;
+	padding: 2%;
+	background-clip: padding-box;
+	background-size: 102% 107%;
+	background-position: center center;
+}
+
+
+.img.wraper {
+    position: relative;
+    width: 1%;
+}
+
+.img.wraper img {
+    position: absolute;
+    width: 35000%;
+    height: 200%;
+    top: -59%;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    /* right: -47vw; */
+    margin-left: -12700%;
+}
+
+
+.fshow {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 1s;
+}
+
+.item {
+	display: flex;
+	position: absolute;
+	background: #000;
+	height: 100%;
+	width: 100%;
+	/* line-height: 50%; */
+	font-size: 5em;
+	text-align: center;
+	color: #FFF;
+	opacity: 1;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 90% 90%;
+	/* border-radius: 10px; */
+}
+
+.a {
+
+  transform: rotateY(0deg) translateZ(250px);
+}
+
+.item img {
+    width: 80%;
+    height: 80%;
+    position: relative;
+    margin: 7%;
+}
+
+
+.b {
+  transform: rotateY(60deg) translateZ(250px);
+}
+.c {
+  transform: rotateY(120deg) translateZ(250px);
+}
+.d {
+  transform: rotateY(180deg) translateZ(250px);
+}
+.e {
+  transform: rotateY(240deg) translateZ(250px);
+}
+.f {
+  transform: rotateY(300deg) translateZ(250px);
+}
+
+.next, .prev {
+	bottom: 31%;
+	border-radius: 3px 0 0 3px;
+	position: absolute;
+	/* margin-top: -22px; */
+	padding: 16px;
+	width: auto;
+	color: white;
+	font-weight: bold;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	font-size: 40px;
+	color: darkseagreen;
+}
+
+
+.next:hover, .prev:hover {  background-color: rgba(55, 54, 54, 0.666) }
+.next { right: -100%; }
+.prev { left: -100%; }
+/* On smaller screens, decrease text size */
+
+/* Projects */
+
+
+.projects
+{
+	display:flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 5%;
+    margin-left: 3%;
+	border-top-width: 10%;
+	background-image: url("../assets/frect.png");
+    background-repeat: no-repeat;
+    background-size: 48% 116%;
+    background-position: 52% 48%;
+    background-clip: unset;
+}
+
+
+.projects img
+{
+    width:100%;
+    height:100%;
+}
+
+.rcol
+{
+	display: flex;
+	width: 75%;
+	flex-direction: column;
+	border: 1px solid black;
+	flex-wrap: wrap;
+	margin-right: -2%;
+}
+/*
+.scol
+{
+	display:flex;
+	width: 25%;
+    flex-direction: column;
+	border: 1px solid black;
+    flex-wrap: wrap;
+} */
+
+.prow
+{
+	display:flex;
+    flex-direction: row;
+
+	margin: 10px;
+	align-content: center;
+    text-align: center;
+	justify-content: center;
+}
+/* .srow
+{
+	display:flex;
+    flex-direction: row;
+    margin: 10px;
+    text-align: center;
+	border: 1px solid green;
+} */
+
+
+.prow:hover .panel{
+
+	border: 1px solid rgb(255, 0, 0);
+	visibility: visible;
+}
+
+.pBox
+{
+	align-items: center;
+	justify-content: center;
+	max-width:25rem;
+	min-width:18rem;
+	text-align: center;
+	display: flex;
+}
+
+.panel
+{
+	align-items: center;
+	justify-content: center;
+	max-width:25rem;
+	min-width:18rem;
+	text-align: center;
+	display: flex;
+	visibility: hidden;
+	transition: 1s;
+}
+
+.pBox_text
+{
+	position: relative;
+	bottom:50%;
+}
+
+
+
