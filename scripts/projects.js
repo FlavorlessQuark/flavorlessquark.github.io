@@ -1,14 +1,12 @@
 // get featured projects from https://gh-pinned-repos-5l2i19um3.vercel.app/?username=FlavorlessQuark
 // Parse as JSON : owner, repo, link, description, language, stars
-window.onload = function() {
+
+var angle = 0;
+function galleryspin(sign) {
 	if (!window.jQuery)
 	{
 		alert("jQuery failed to load. Please restart the page. If the problem persists please contact me");
 	}
-}
-
-var angle = 0;
-function galleryspin(sign) {
 	spinner = document.querySelector(".fshow");
 	angle += (60 * sign);
 
