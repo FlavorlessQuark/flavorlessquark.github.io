@@ -19,17 +19,7 @@ img {vertical-align: middle;}
     top: 50%;
     position: relative;
 }
-.featured {
-	left: 40%;
-	display: flex;
-	margin: 0;
-	width: 18rem;
-	height: 15rem;
-	position: relative;
-	perspective: 1300px;
-	background-repeat: no-repeat;
-	top: 500%;
-}
+
 
 .ftext
 {
