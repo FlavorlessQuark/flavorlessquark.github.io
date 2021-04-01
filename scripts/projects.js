@@ -3,6 +3,7 @@
 
 var angle = 0;
 var mousex = 0;
+var carousel;
 
 function galleryspin(sign) {
 	if (!window.jQuery)
@@ -43,7 +44,7 @@ document.addEventListener('readystatechange', event => {
 	{
         // alert("hi 2");
 
-		var carousel =  document.getElementById("fcontent");
+		carousel =  document.getElementById("spin");
 		console.log("Hi");
 		getJSON('https://gh-pinned-repos-5l2i19um3.vercel.app/?username=FlavorlessQuark',
 		function(err, data)
@@ -60,6 +61,32 @@ document.addEventListener('readystatechange', event => {
 				l.href = data[i].link;
 				img.src = "https://raw.githubusercontent.com/" + data[i].owner + "/" + data[i].repo +"/master/Ressources/icon.png";
 			}
+		});
+
+		carousel.addEventListener('mousedown', function(event)
+		{
+			mousex = event.pageX;
+		});
+
+		carousel.addEventListener('mouseup', function(event)
+		{
+			if (mousex < event.pageX)
+				galleryspin(1);
+			else if ((mousex > event.pageX))
+				galleryspin(-1);
+		});
+
+		carousel.addEventListener('touchstart', function(event)
+		{
+			mousex = event.changedTouches[0].screenX;
+		});
+
+		carousel.addEventListener('touchend', function(event)
+		{
+			if (mousex < event.changedTouches[0].screenX)
+				galleryspin(1);
+			else if ((mousex > event.changedTouches[0].screenX))
+				galleryspin(-1);
 		});
 
 	}
