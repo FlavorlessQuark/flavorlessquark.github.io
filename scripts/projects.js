@@ -2,6 +2,8 @@
 // Parse as JSON : owner, repo, link, description, language, stars
 
 var angle = 0;
+var mousex = 0;
+
 function galleryspin(sign) {
 	if (!window.jQuery)
 	{
@@ -41,6 +43,7 @@ document.addEventListener('readystatechange', event => {
 	{
         // alert("hi 2");
 
+		var carousel =  document.getElementById("fcontent");
 		console.log("Hi");
 		getJSON('https://gh-pinned-repos-5l2i19um3.vercel.app/?username=FlavorlessQuark',
 		function(err, data)
@@ -49,15 +52,58 @@ document.addEventListener('readystatechange', event => {
 				alert('Something went wrong: ' + err);
 			for (var i = 0; i < data.length; i += 1)
 			{
-			var p = document.getElementById("fd_" + (i + 1));
-			var l = document.getElementById("l" + (i + 1));
-			var img = document.getElementById("img" + ( i + 1));
+				let p = document.getElementById("fd_" + (i + 1));
+				let l = document.getElementById("l" + (i + 1));
+				let img = document.getElementById("img" + ( i + 1));
 
 				p.innerHTML = data[i].repo ;
 				l.href = data[i].link;
 				img.src = "https://raw.githubusercontent.com/" + data[i].owner + "/" + data[i].repo +"/master/Ressources/icon.png";
 			}
 		});
+
 	}
 });
+
+carousel.addEventListener('mousedown', function(event)
+{
+
+}
+
+
+
+ onTouch() {
+    let touchstartX = 0;
+    let touchendX = 0;
+    let clickX = 0;
+    let drag = false;
+
+    this.carouselContainer.addEventListener('mousedown', function(event) {
+      clickX = event.pageX
+      drag = true
+    }, false)
+
+    this.carouselContainer.addEventListener('mouseup', function(event) {
+       if(drag) {
+         if(event.pageX < clickX) {
+            this.setCurrentState( this.controlsContainer.childNodes[1], this.getCurrentState())
+          } else if (event.pageX > clickX) {
+            this.setCurrentState( this.controlsContainer.childNodes[0], this.getCurrentState())
+          }
+       }
+    }.bind(this), false)
+ this.carouselContainer.addEventListener('touchstart', function(event) {
+        touchstartX = event.changedTouches[0].screenX;
+    }, false);
+    this.carouselContainer.addEventListener('touchend', function(event) {
+        touchendX = event.changedTouches[0].screenX;
+        if (touchendX <= touchstartX) {
+            this.setCurrentState( this.controlsContainer.childNodes[1], this.getCurrentState())
+        }
+        else if (touchendX > touchstartX) {
+            this.setCurrentState( this.controlsContainer.childNodes[0], this.getCurrentState())
+        }
+    }.bind(this), false);
+  }
+
 
