@@ -65,8 +65,9 @@ document.addEventListener('readystatechange', event => {
 
 		carousel.addEventListener('mousedown', function(event)
 		{
+			console.log("mouse");
 			mousex = event.pageX;
-		});
+		}, false);
 
 		carousel.addEventListener('mouseup', function(event)
 		{
@@ -74,12 +75,13 @@ document.addEventListener('readystatechange', event => {
 				galleryspin(1);
 			else if ((mousex > event.pageX))
 				galleryspin(-1);
-		});
+		}, false);
 
 		carousel.addEventListener('touchstart', function(event)
 		{
 			mousex = event.changedTouches[0].screenX;
-		});
+			console.log("touch ", mousex, event.changedTouches);
+		}, false);
 
 		carousel.addEventListener('touchend', function(event)
 		{
@@ -87,7 +89,7 @@ document.addEventListener('readystatechange', event => {
 				galleryspin(1);
 			else if ((mousex > event.changedTouches[0].screenX))
 				galleryspin(-1);
-		});
+		}, false);
 
 	}
 });

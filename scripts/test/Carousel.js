@@ -13,7 +13,7 @@ class Carousel {
     this.autoplayTime = params.autoplayTime;
     this.setParams()
   }
-  
+
     getCurrentState() {
     const selectedItem = this.carouselContainer.querySelector(`.${this.classNameItem}-selected`);
     const previousSelectedItem = this.carouselContainer.querySelector(`.${this.classNameItem}-previous`);
@@ -28,17 +28,17 @@ class Carousel {
 
     const  downCommingCarouselItem = this.carouselContainer.querySelector(`.${this.classNameItem}[data-index='${indexDownCarouselItem}']`);
     const  upCommingCarouselItem = this.carouselContainer.querySelector(`.${this.classNameItem}[data-index='${indexUpCarouselItem}']`);
-    
+
     return [selectedItem, previousSelectedItem, nextSelectedItem, firstCarouselItem, lastCarouselItem,downCommingCarouselItem, upCommingCarouselItem, indexDownCarouselItem, indexUpCarouselItem]
   }
 
 //init all params
   setParams() {
-      
+
     this.setInitialState();
     this.setControls();
     this.onTouch();
-      
+
     if(this.displayControls) {
       this.useControls();
     }
@@ -46,7 +46,7 @@ class Carousel {
         setInterval( function(){ this.setCurrentState( this.controlsContainer.childNodes[1], this.getCurrentState())}.bind(this), this.autoplayTime)
     }
   }
-  
+
 // Construct the carousel controls
   setControls() {
     this.carouselControls.forEach((control, index) => {
@@ -56,9 +56,9 @@ class Carousel {
        !!this.controlsContainer.childNodes[0] ? this.controlsContainer.childNodes[0].insertAdjacentHTML('beforeend', this.textControls[0]) : null;
     !!this.controlsContainer.childNodes[1] ? this.controlsContainer.childNodes[1].insertAdjacentHTML('beforeend', this.textControls[1]) : null;
     }
-   
-  } 
-  
+
+  }
+
 // Assign initial css classes and attribute for each items
   setInitialState() {
     this.carouselArray.forEach((item,index) => {
@@ -117,15 +117,15 @@ class Carousel {
         case 4:
           this.setInitialState()
           break
-        default: 
+        default:
         previous.classList.add(`${this.classNameItem}-first`);
         selected.classList.add(`${this.classNameItem}-previous`);
         next.classList.add(`${this.classNameItem}-selected`);
         last.classList.add(`${this.classNameItem}-next`);
         upComming.classList.add(`${this.classNameItem}-last`)
       }
-    } 
-    
+    }
+
     else {
        this.carouselArray.forEach((item) => {
         item.classList.remove(`${this.classNameItem}-trigger-next`)
@@ -137,7 +137,7 @@ class Carousel {
           first.classList.add(`${this.classNameItem}-previous`);
           previous.classList.add(`${this.classNameItem}-selected`);
           selected.classList.add(`${this.classNameItem}-next`);
-          next.classList.add(`${this.classNameItem}-last`);         
+          next.classList.add(`${this.classNameItem}-last`);
           break
         case (this.CarouselLength - 2):
           this.carouselArray[this.carouselLength -1].classList.add(`${this.classNameItem}-previous`);
@@ -179,39 +179,4 @@ class Carousel {
       });
     });
   }
-  
-  // touch action
-  onTouch() {
-    let touchstartX = 0;
-    let touchendX = 0;
-    let clickX = 0;
-    let drag = false;
-    
-    this.carouselContainer.addEventListener('mousedown', function(event) {
-      clickX = event.pageX
-      drag = true
-    }, false)
-    
-    this.carouselContainer.addEventListener('mouseup', function(event) {
-       if(drag) {
-         if(event.pageX < clickX) {
-            this.setCurrentState( this.controlsContainer.childNodes[1], this.getCurrentState())
-          } else if (event.pageX > clickX) {
-            this.setCurrentState( this.controlsContainer.childNodes[0], this.getCurrentState())
-          }
-       }
-    }.bind(this), false)
- this.carouselContainer.addEventListener('touchstart', function(event) {
-        touchstartX = event.changedTouches[0].screenX;
-    }, false);
-    this.carouselContainer.addEventListener('touchend', function(event) {
-        touchendX = event.changedTouches[0].screenX;
-        if (touchendX <= touchstartX) {
-            this.setCurrentState( this.controlsContainer.childNodes[1], this.getCurrentState())
-        }
-        else if (touchendX > touchstartX) {
-            this.setCurrentState( this.controlsContainer.childNodes[0], this.getCurrentState())
-        }
-    }.bind(this), false); 
-  }
-}
+
