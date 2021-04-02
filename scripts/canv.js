@@ -15,8 +15,8 @@ var settings = {
 var visited = [];
 
 function onResize() {
-  width = canvas.width = window.innerWidth;
-  height = canvas.height = window.innerHeight;
+  width = ctx.canvas.width = window.innerWidth;
+  height = ctx.canvas.height = window.innerHeight;
 }
 function rotate(vec, angle) {
   //convert the angle from degrees to radians
