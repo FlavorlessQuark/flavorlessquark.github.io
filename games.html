@@ -1,11 +1,60 @@
 <!DOCTYPE html>
-
-<head>
-	<title>Games</title>
-	<link rel="stylesheet" src="stylesheet/proj.css">
-</head>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<title>Games</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<link rel="icon" href="assets/icon.png">
+		<link rel="stylesheet" href="stylesheets/navbar.css"/>
+		<link rel="stylesheet" href="stylesheets/pagestyle.css"/>
+		<link rel="stylesheet" href="stylesheets/games.css"/>
+	</head>
 <body>
-	<a href="projects.html">Previous</a>
-	<a href="index.html">Home</a>
-	<a href="about.html">Next</a>
+	<canvas id="canvas" style="position: fixed; z-index: -1;"></canvas>
+			<script src="scripts/canv.js"></script>
+	<div class="page_container">
+		<div class="scan_lines"></div>
+		<div class="nav_bar">
+			<div class="left">
+				<div class="nav_link">
+					<div class="nav_text">
+						<a href="projects.html"><img src="assets/arrow2.png"></a>
+					</div>
+				</div>
+			</div>
+			<div class="mid">
+				<div class="nav_link">
+					<div class="nav_text">
+						<a href="index.html">HOME</a>
+					</div>
+				</div>
+			</div>
+			<div class="right">
+				<div class="nav_link">
+					<div class="nav_text">
+						<a href="about.html"><img src="assets/arrow1.png"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="contents">
+			<div class="Desc">
+				<p>Have some fun~</p>
+			</div>
+			<div class="rcol">
+				<div class="prow">
+					<div class="pBox">
+						<a href="games/snake/snake.html"><img src="games/snake/icon.png"></a>
+					</div>
+					<div class="pBox">
+						<a href="games/tiles/tiles.html"><img src="games/tiles/icon.png"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </body>

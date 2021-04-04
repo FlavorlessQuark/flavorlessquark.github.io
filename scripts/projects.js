@@ -81,7 +81,7 @@ document.addEventListener('readystatechange', event => {
 		{
 			mousex = event.changedTouches[0].screenX;
 			console.log("touch ", mousex, event.changedTouches);
-		}, false);
+		}, {passive:true}, false);
 
 		carousel.addEventListener('touchend', function(event)
 		{

@@ -1,21 +1,51 @@
 <html>
 	<head>
 		<title>Home</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="stylesheets/home.css"/>
+		<link rel="stylesheet" href="stylesheets/pagestyle.css"/>
+		<link rel="stylesheet" href="stylesheets/navbar.css"/>
+		<script src="scripts/home.js"></script>
 	</head>
 	<body>
+		<canvas id="canvas" style="position: fixed; z-index: -1;"></canvas>
+		<script src="scripts/canv.js"></script>
 		<div class="page_container">
+			<div class="scan_lines"></div>
 			<div class="nav_bar">
+				<div class="left">
+					<div class="nav_link">
+						<div class="nav_text">
+							<a href="contact.html"><img src="assets/arrow2.png"></a>
+						</div>
+					</div>
+				</div>
 				<div class="mid">
 					<div class="nav_link">
-						<a href="index.html">Home</a>
+						<div class="nav_text">
+							<a href="index.html">HOME</a>
+						</div>
 					</div>
 				</div>
 				<div class="right">
 					<div class="nav_link">
-						<a href="projects.html">Next</a>
+						<div class="nav_text">
+							<a href="projects.html"><img src="assets/arrow1.png"></a>
+						</div>
 					</div>
 				</div>
+			</div>
+			<div class="compass_container">
+				   <div class='circle-container'>
+					<a href='' class='center'><img src='assets/prism5.gif'></a>
+					<a href='about.html' id='prism_a'><img src='assets/prism5.gif'><h1>About</h1></a>
+					<a href='projects.html' id='prism_b'><img src='assets/prism5.gif'><h1>Projects</h1></a>
+					<a href='games.html' id='prism_c'><img src='assets/prism5.gif'><h1>Games</h1></a>
+					<a href='contact.html' id='prism_d'><img src='assets/prism5.gif'><h1>Contact</h1></a>
+				</div>
+			</div>
+			<div>
+				<p>Welcome user.</p><br>
 			</div>
 		</div>
 	</body>

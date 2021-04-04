@@ -3,7 +3,13 @@
 	box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Cardinal Sharp";
+  src: url(../assets/SharpCardinal.ttf) format("truetype");
+}
+
 html, body{
+	font-family: "Cardinal Sharp", sans-serif;
 	margin: 0%;
 	height: 100%;
 }
