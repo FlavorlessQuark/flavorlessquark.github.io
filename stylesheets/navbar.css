@@ -12,8 +12,8 @@ a:-webkit-any-link
 .nav_text
 {
 	text-decoration: none;
-	color: aliceblue;
-	font-size: large;
+	/* color: aliceblue; */
+	font-size: 20pt;
 	font-weight: 500;
 }
 
@@ -22,8 +22,11 @@ a:-webkit-any-link
 	display: flex;
 	justify-content: space-between;
 	/* padding-left: 42px; */
+	height: 5%;
 	/* font-size: large; */
 }
+
+.nav_bar {}
 
 .right
 {
@@ -62,14 +65,15 @@ top:10%;
 	justify-content: center;
 	position: relative;
 	/* text-align: center; */
-	width: 3.8vw;
-	height: 1.7vw;
+	height: 2.5em;
+	width: 5.8em;
 	margin: auto;
 	color: #69ca62;
+	text-align: center;
 }
 .nav_link:hover:before, .nav_link:hover::after {
-	width: 4vw;
-	height: 2vw;
+	height: 2.8em;
+	width: 5.8em;
 	position: absolute;
 	content: "";
 	z-index: -1;
@@ -86,15 +90,15 @@ top:10%;
 
 @keyframes clipMe {
  0%, 100% {
-    clip: rect(0vw, 4.1vw, 0.1vw, 0vw);
+    clip: rect(0em, 7.8em, 0.1em, 0em);
   }
   25% {
-    clip: rect(0vw, 0.1vw, 2.2vw, 0vw);
+    clip: rect(0em, 0.1em, 2.7em, 0em);
   }
   50% {
-    clip: rect(2.1vw, 4.1vw, 2.2vw, 0vw);
+    clip: rect(7.8em, 7.8em, 2.7em, 0em);
   }
   75% {
-    clip: rect(0vw, 4.1vw, 2.2vw, 4.0vw);
+    clip: rect(0em, 7.8em, 2.7em, 7.8em);
   }
 }
