@@ -1,11 +1,78 @@
 <!DOCTYPE html>
 <head>
 	<title>About</title>
-	<link rel="stylesheet" src="stylesheet/about.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<link rel="icon" href="assets/icon.png">
+		<link rel="stylesheet" href="stylesheets/navbar.css"/>
+		<link rel="stylesheet" href="stylesheets/pagestyle.css"/>
+		<link rel="stylesheet" href="stylesheets/about.css"/>
 </head>
 <body>
-	<a href="games.html">Previous</a>
-	<a href="index.html">Home</a>
-	<a href="contact.html">Next</a>
+	<canvas id="canvas" style="position: fixed; z-index: -1;"></canvas>
+	<script src="scripts/canv.js"></script>
+	<div class="nav_bar">
+			<div class="left">
+				<div class="nav_link">
+					<div class="nav_text">
+						<a href="projects.html"><img src="assets/arrow2.png"></a>
+					</div>
+				</div>
+			</div>
+			<div class="mid">
+				<div class="nav_link">
+					<div class="nav_text">
+						<a href="index.html">HOME</a>
+					</div>
+				</div>
+			</div>
+			<div class="right">
+				<div class="nav_link">
+					<div class="nav_text">
+						<a href="contact.html"><img src="assets/arrow1.png"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	<div class="page-container">
+		<h1 id="about-title">
+			> ABOUT ME
+		</h1>
+		<p id="about-text">
+			I'm a self-taught Software Developer, and part-time automagician.
+			I've been writing all sorts of code for the past few years.
+
+			I'm an alumna of 42SiliconValley / 42Paris.
+			I really like to write tools, automation scripts, and graphic applications.
+			I'm also very interested by anything related to Ai and Robotics and hope to work in this field someday.
+
+			If you haven't guessed by looking at my <a href="https://github.com/FlavorlessQuark" style="color: #f2a431; font-weight: bold;"> Github page </a>, I use the ancien arcane art that is the <a href="https://www.youtube.com/watch?v=Fm5Ust7vEhk" style="color: #f2a431;">C</a> language, and the not so ancient magic that is Python.
+
+			But enough about me and more about code!
+		</p>
+		<hr>
+		<p id="code-text">
+			I like to figure out whatever is required for my projects to work. Whether it is math, physics or how to structure things appropriately,
+			I prefer to understand exactly how everythign works even if it sometimes means that I have to reinvet the wheel
+
+			Perhaps one of the most interesing project I have made is SDLX.
+
+			This is a wrapper for SDL which automagically does all the time consuming stuff
+			(like getting input, animating sprites, getting consistent FPS etc...)
+			The demo code for this wraper utilizes just about 42 lines of code to create an animated sprite
+			that can be moved around the screen witharrows and WASD.
+
+			I think this is a good illustration of how I like to code.
+			I enjoy writing "beautiful" code.
+			Not just visually appealing, but code that flows smoothly and is readable, efficient and well structured.
+			Code that I can use anytime and that makes programming easier.
+			It's very easy to add just about any feature to SDLX.
+		</p>
+
+		<p class="footer"> > This website has been summoned from the void by me and my keyboard</p>
+	</div>
 </body>
 

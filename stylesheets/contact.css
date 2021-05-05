@@ -1,1 +1,49 @@
+#contact-title
+{
+	color:greenyellow;
+	font-size: xx-large;
+	font-weight: bold;
+	padding: 5% 0% 0% 41%;
+}
 
+#contact-text
+{
+	color:rgb(165, 225, 106);
+	font-size: x-large;
+	font-weight: 400;
+	text-align: center;
+	margin: 3% 15% 0%;
+	white-space: pre-line;
+}
+
+
+.email-form
+{
+	display: flex;
+}
+
+.email-form {
+    display: flex;
+    position: relative;
+    /* margin: 50%; */
+    flex-direction: row;
+    /* left: 35%; */
+    text-align: end;
+    justify-content: center;
+}
+
+.text-area {
+    width: 100%;
+}
+
+form {
+}
+
+label.email_attr {
+    color: coral;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    font-size: xx-large;
+    font-weight: bold;
+}
