@@ -2,28 +2,34 @@ import logo from './logo.svg';
 // import Module from './test';
 // import { test } from '.';
 import { useEffect } from 'react';
-// import InnerHTML from 'dangerously-set-html-content'
-// eslint-disable-next-line import/no-webpack-loader-syntax
-// const htmlModule = require('raw-loader!./test.html');
+import React from "react"
+import {
+  HashRouter as Router,
+  Navigate,
+  Route,
+  Routes,
+} from "react-router-dom"
+import { Route1 } from './Route1';
+import { Route2 } from './Route2';
 // const html = htmlModule.default;
 // import { returniframe } from './embedWASM/embedded';
 const App = () => {
-  useEffect(() => {
-    window.Module({
-      canvas: (() => document.getElementById('canvas'))(),
-    })
-    .then(() => {
-      console.log("loaded");
-      });
-  }, []);
+//   useEffect(() => {
+//     window.TEST({
+//       canvas: (() => document.getElementById('canvas'))(),
+//     })
+//     .then(() => {
+//       console.log("loaded");
+//       });
+//   }, []);
   return (
-    <div className="App">
-        
-         {/* <div className="content" dangerouslySetInnerHTML={{__html: rawHTMLCode}}></div> */}
-         {/* <InnerHTML html={html} /> */}
-         <canvas  id="canvas" ></canvas>
-        
-    </div>
+    // <Router>
+
+      <Routes>
+        <Route path="/test2" element={<Route1/>}/>
+        <Route path="/" element={<Route2/>}/>
+      </Routes>
+    // </Router>
   );
 }
 
