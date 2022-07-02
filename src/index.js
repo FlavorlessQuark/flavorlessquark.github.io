@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 // import Module from './test.js';
-
+import './test.js';
 // export const test = Module().cwrap('test'); // Call Module as a function
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
