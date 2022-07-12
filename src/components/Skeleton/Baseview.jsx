@@ -39,7 +39,7 @@ const Background = styled.div`
 
 const PageContent = styled.div`
     display: flex;
-    width: 80%;
+    width: 75%;
     margin: auto;
     height: 100%;
 `

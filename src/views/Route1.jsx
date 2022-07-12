@@ -1,20 +1,20 @@
 // import Module from './test';
 // import { test } from '.';
 import React, { useEffect, useState } from 'react';
-import {Helmet} from 'react-helmet';
+import { Helmet } from 'react-helmet';
 // import Script
 
 export const Route1 = () => {
     const [load, setLoad] = useState(false)
-    // useEffect(() => {
-    //     window.TEST({
-    //         canvas: (() => document.getElementById('canvas'))(),
-    //     })
-    //     .then(() => {
-    //         console.log("loaded");
-    //         setLoad(true);
-    //     });
-    // }, []);
+    useEffect(() => {
+        window.TEST({
+            canvas: (() => document.getElementById('canvas'))(),
+        })
+        .then(() => {
+            console.log("loaded");
+            setLoad(true);
+        });
+    }, []);
     const handleScript = (e) => {
       console.log("loaded", window.TEST);
     };
@@ -45,7 +45,7 @@ export const Route1 = () => {
            <canvas  id="canvas" ></canvas>
           <Helmet>
               <script
-                type='text/plain'
+                // type='text/plain'
                 src="https://cdn.jsdelivr.net/gh/FlavorlessQuark/flavorlessquark.github.io/public/custom-loading.js"/>
                 
                 <script>

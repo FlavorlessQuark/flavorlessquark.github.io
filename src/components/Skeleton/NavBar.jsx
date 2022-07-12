@@ -17,11 +17,12 @@ export const NavBar = () =>
     return (
         <Container show={show} onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)} onClick={() => setShow(show ^ 1)}>
             <Delimeter/>
+            <Arrow show={show}> &#8250; </Arrow>
             <OptionContainer >
                 {
                     Object.keys(options).map((elem) =>
                         <>          
-                        <Option active={active === elem && show}  href={show ? options[elem] : "javascript:void(0)"} onMouseEnter={() => setActive(elem)}> {active == elem && <Arrow show={show}> &#8250; </Arrow>} {elem} </Option>
+                        <Option active={active === elem && show}  href={show ? options[elem] : "javascript:void(0)"} onMouseEnter={() => setActive(elem)}>{elem} </Option>
                         </>
                     )
                 }
@@ -31,10 +32,10 @@ export const NavBar = () =>
 }
 const Arrow = styled.div`
     color:${props => props.theme.colors.secondary};
-    display: flex;
+    display: ${props => props.show ? "none" : "flex"};
     font-size: 30px;
     position: absolute;
-    left: ${props => props.show ? "-35px" : "-18px"};
+    left: -18px;
 `
 
 const Container = styled.div`
@@ -42,7 +43,7 @@ const Container = styled.div`
     flex-direction: row;
     
     position: fixed;
-    right: ${props => props.show ? "0" : "-81px"};
+    right: ${props => props.show ? "0" : "-105px"};
     top: 0;
     transition: right 0.2s;
 `
@@ -58,16 +59,16 @@ const OptionContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 82px
+    max-width: 110px
 
 `
 
 const Option = styled.div`
     display: flex;
 
-    padding: 10px;
+    padding: 13px;
     
-    font-size: 13px;
+    font-size: 18px;
     font-family: Source Code Pro;
     color: ${props => props.theme.colors.secondary};
     text-decoration: none;

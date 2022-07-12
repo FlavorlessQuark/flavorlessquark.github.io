@@ -31,31 +31,35 @@ const Container = styled.div`
     position: fixed;
     left: 0;
     bottom: 0;
+
+    width: 100%;
 `
 
 const SocialContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    width: 8%;
+    min-width: 50px;
+    max-width: 110px;
 `
 const Github = styled(githubSVG)`
     display: flex;
-    width: 70%;
+    width: 85%;
     stroke: ${props => props.theme.colors.highlight};
-    // padding: 9px;
+    padding: 5% 0px;
 `
 const Linkedin = styled(linkedinSVG)`
     display: flex;
-    width: 70%;
+    width: 85%;
     stroke: ${props => props.theme.colors.highlight};
-    // padding: 9px;
+    padding: 5% 0px;
 `
 const Email = styled(emailSVG)`
     display: flex;
-    width: 70%;
+    width: 85%;
     stroke: ${props => props.theme.colors.highlight};
-    // padding: 9px;
+    padding: 5% 0px;
 `
 
 const Delimeter = styled.div`
