@@ -2,24 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import {
-  HashRouter as Router,
-} from "react-router-dom"
-// import Module from './custom-loading';
-// import './test.js';
-// export const test = Module().cwrap('test'); // Call Module as a function
+import WebFont from "webfontloader";
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
-
+WebFont.load({
+  google: {
+      families: ['Poppins', "Saira:300,700", "Source Code Pro:500,400,700"]
+  }
+});
 root.render(
   <React.StrictMode>
-    <Router basename="/">
       <App />
-    </Router>
-
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
